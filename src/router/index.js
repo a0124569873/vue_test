@@ -13,6 +13,7 @@ import heighchart from '@/components/heighchart'
 import father from '@/components/father'
 import testcss from '@/components/testcss'
 import promise from '@/components/promise'
+import menuitem from '@/components/menuitem'
 
 Vue.use(Router)
 
@@ -27,6 +28,22 @@ export default new Router({
           path: '/',
           name: 'leftbar',
           component: leftbar
+        },
+        {
+          path: 'menuitem',
+          name: 'menuitem',
+          component: menuitem,
+          children:[
+            {
+              path:"/",
+              component: dialog
+            },
+            {
+              path:"/vvv",
+              component: g2chart
+            }
+          ]
+
         },
         {
           path: 'header',

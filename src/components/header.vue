@@ -64,7 +64,7 @@ export default {
           break;
         case "2":
         console.log(key);
-          this.jumpTo("/dialog")
+          this.jumpTo("/menuitem")
           break;
         case "3":
         console.log(key);
