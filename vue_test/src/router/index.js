@@ -14,11 +14,16 @@ import father from '@/components/father'
 import testcss from '@/components/testcss'
 import promise from '@/components/promise'
 import menuitem from '@/components/menuitem'
+import login from '@/components/login'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/login',
+      component: login
+    },
     {
       path: '/',
       name: 'mainn',
@@ -41,6 +46,10 @@ export default new Router({
             {
               path:"/vvv",
               component: g2chart
+            },
+            {
+              path: '/login',
+              component: login
             }
           ]
 

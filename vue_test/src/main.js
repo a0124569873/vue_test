@@ -14,6 +14,11 @@ import 'bootstrap/dist/js/bootstrap.min'
 
 import './theme/elui.less';
 
+import store from './vuex/Stroe_test'
+
+
+
+
 // console.log($)
 
 
@@ -33,6 +38,7 @@ Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 
+
 /* eslint-disable no-new */
 
 let mixin = {
@@ -47,9 +53,12 @@ new Vue({
   mixins:[mixin],
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
   mounted(){
     this.test_mixin() 
   }
 })
+
+router.push("/login")

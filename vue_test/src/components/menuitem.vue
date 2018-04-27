@@ -28,26 +28,61 @@
           <el-menu-item index="1-4-1" @click="ggg">用户列表</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item index="2">
-        <!-- <i class="el-icon-menu"></i> -->
-        <span slot="title">导航二</span>
-      </el-menu-item>
+      <el-submenu index="10">
+        <template slot="title">
+          <span>用户设置</span>
+        </template>
+        <el-menu-item index="2" @click="aaaa">
+          添加IP
+        </el-menu-item>
+      </el-submenu>
+      
       <el-menu-item index="3" disabled>
         <!-- <i class="el-icon-document"></i> -->
-        <span slot="title">导航三</span>
+        <span slot="title">日志查看</span>
       </el-menu-item>
       <el-menu-item index="4">
         <!-- <i class="el-icon-setting"></i> -->
-        <span slot="title">导航四</span>
+        <span slot="title">系统更新</span>
       </el-menu-item>
     </el-menu>
   </el-col>
+  请选择：
+  <el-select v-model="ddd" filterable placeholder="请选择">
+    <el-option
+     v-for="item in fff"
+     :key="item.aaa"
+     :label="item.bbb"
+     :value="item.aaa"
+     ></el-option>
+  </el-select>
+  {{ddd}}
   <router-view></router-view>
 </el-row>
 </template>
 
 <script>
   export default {
+    data(){
+      return {
+        ddd:"",
+        fff:[
+          {aaa:1,bbb:11},
+          {aaa:5,bbb:112321},
+          {aaa:6,bbb:12132131},
+          {aaa:7,bbb:1123211},
+          {aaa:9,bbb:1312311},
+          {aaa:2,bbb:21232132},
+          {aaa:3,bbb:33},
+          {aaa:4,bbb:44}
+        ]
+      }
+    },
+    mounted(){
+
+      this.$store.commit('add_zzz')
+      // alert(this.$store.state.zzz)
+    },
     methods: {
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
@@ -57,6 +92,9 @@
       },
       ggg(){
           this.$router.push("vvv")
+      },
+      aaaa(){
+        this.$router.push("login")
       }
     }
   }
