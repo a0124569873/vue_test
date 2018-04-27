@@ -1,0 +1,51 @@
+
+$HEIGHT: 50px;
+.vd-head{
+  width: 100%;
+  height:$HEIGHT;
+  box-sizing: border-box;
+  background: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  }
+
+.right—list,.logo{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  li{   
+    height: 100%; 
+    line-height: $HEIGHT;
+    img {
+      width: 20px;
+      padding: 0 20px;
+    }
+    h3{
+      padding: 0 20px;
+      line-height: $HEIGHT;
+      font-size: 15px;
+      color: #ffffff;
+    } 
+    span {
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0 20px;  
+      height: 100%;
+      display: inline-block;
+    }
+  }
+  .line{
+    border-left:1px solid  rgba(0, 0, 0, 0.1);
+    height: 100%; 
+  }
+}
+
+.hover-able{
+  &:hover{
+    background: rgba(0, 0, 0, 0.1);
+  }
+}

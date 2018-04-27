@@ -1,0 +1,62 @@
+
+/* 改变主题色变量 */
+$--color-primary: #67b7ff;
+// $--dropdown-menuItem-hover-color: blue;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: './fonts';
+/* 颜色变量 */
+$primary-color:	#3898fe;
+$table-border-color:#bfcbd9;
+$background-color:#FFFFFF;
+$vd-menu-hover: #67b7ff;
+$vd-menu-active: #67b7ff;
+.theme-blue {
+	@import './base.scss';
+	@import './menu/index.scss';
+	@import './header/index.scss';
+	@import "../../node_modules/element-ui/packages/theme-chalk/src/index";
+	.el-icon-view:hover {
+		color: $--color-primary
+	}
+	.alert-tip {
+		color:$--color-primary;
+		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 18px;
+	}
+	.topo-table .el-table__row>td {
+		border: 1px solid #878d99
+	}
+	.topo-table tbody td:last-child {
+		border-right-width: 4px;
+	}
+	.topo-table tbody tr:last-child td {
+		border-bottom-width: 2px;
+	}
+	.my-upload:hover {
+		border-color: $--color-primary
+	}
+	
+	.el-table__body-wrapper {
+		overflow: hidden
+	}
+	
+	~ul .el-dropdown-menu__item:not(.is-disabled):hover {
+		background-color: #bfcbd9;
+		color: $--color-primary;
+	}
+	~.el-select-dropdown {
+		.el-select-dropdown__item {
+			color: $--color-primary;
+		}
+	}
+	
+}
+
+
+
+
+

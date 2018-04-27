@@ -1,0 +1,73 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,a{margin:0;padding:0; list-style:none;font:12px "微软雅黑",Arial,Tahoma, Helvetica,\5b8b\4f53, sans-serif; -webkit-appearance: none;}
+ul,ol,ul li,ol li { list-style: none; }
+form label { cursor:pointer; }
+/*body,html{width: 100%;height: 100%}*/
+input,button,select,textarea {outline:none;border: none }
+input { vertical-align:middle; }
+img { border:0; vertical-align: middle;}/*重置图片元素*/
+table { border-collapse:collapse;border-spacing: 0; }/*重置表格*/
+.l { float:left; }
+.r { float:right; }
+button,input[type="reset"],input[type="button"],input[type="submit"] { line-height:normal }
+
+a,button { text-decoration:none; cursor: pointer;}
+input { _filter:chroma(color=#000000); }
+/*--清除浮动--*/
+.clearfix:after { clear:both;content:".";display:block;font-size:0;height:0;visibility:hidden; }
+.clearfix:after { _zoom:1; }
+.overflow { overflow:hidden; _zoom:1; }
+.clear { clear:both; height:0;font-size:0; overflow:hidden; }
+/*--去除火狐边框为红色--*/
+input:required:invalid, input:focus:invalid, textarea:required:invalid, textarea:focus:invalid{box-shadow: none;}
+body{
+    overflow-x: hidden;
+    background: #e5e5e5;
+	/*阻止双击选择页面文字*/
+    -moz-user-select:none;
+    -moz-user-select:none
+}
+/*placeholder字体样式*/
+::-webkit-input-placeholder {
+	color:#E6E6E6;
+}
+::-moz-placeholder { 
+    color:#E6E6E6;
+}
+:-ms-input-placeholder{
+   color:#E6E6E6;
+} 
+/*选择input按钮*/
+input[type="checkbox"]{
+	-webkit-appearance: none;
+   	background: url(./img/uncheck.png) no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	cursor: pointer;
+	width: 18px;
+	height:18px;
+}
+
+
+input[type="checkbox"]:focus,
+input[type="checkbox"]:hover {
+	outline: none;
+    background: url(./img/hover.png) no-repeat;
+	background-size: contain;
+}
+
+input[type="checkbox"]:checked {
+  	background: url(./img/checked.png) no-repeat;
+  	background-size: contain;
+}
+/*input[type="checkbox"][disabled] {
+ 	background: #fff url(./img/check.png) no-repeat;
+	background-size: contain;
+}
+
+input[type="checkbox"][disabled]:checked {
+  background: #fff url(./img/checkdisabled.png) no-repeat;
+  background-size: contain;
+}*/
+img{
+	vertical-align: middle;
+}

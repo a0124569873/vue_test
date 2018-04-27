@@ -1,0 +1,84 @@
+
+/* 改变主题色变量 */
+$--color-primary: #FF8E7A;
+// $--dropdown-menuItem-hover-color: #FF8E7A;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: './fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+/* 颜色变量 */
+$primary-color:	#ae0918;
+$table-border-color:#bfcbd9;
+$background-color:#FFFFFF;
+$vd-menu-hover: #e74c3c;
+$vd-menu-active: #ffa595;
+.theme-red {
+	@import './base.scss';
+	@import './menu/index.scss';
+	@import './header/index.scss';
+	.el-icon-view:hover {
+		color: $--color-primary
+	}
+	.alert-tip {
+		color:$--color-primary;
+		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 18px;
+	}
+	.topo-table .el-table__row>td {
+		border: 1px solid #878d99
+	}
+	.topo-table tbody td:last-child {
+		border-right-width: 4px;
+	}
+	.topo-table tbody tr:last-child td {
+		border-bottom-width: 2px;
+	}
+	.my-upload:hover {
+		border-color: $--color-primary
+	}
+	.el-table__body-wrapper {
+		overflow: hidden
+	}
+	~ul .el-dropdown-menu__item:not(.is-disabled):hover {
+		background-color: rgba(255, 142, 122, .1);
+		color: $--color-primary !important;
+	}
+	.el-input__inner:focus {
+		border-color: $--color-primary;
+	}
+	.el-tabs__item.is-active {
+		color: $--color-primary;
+	}
+	.el-tabs__active-bar {
+		background: $--color-primary;
+	}
+	.el-tabs__item:hover {
+		color: $--color-primary;
+	}
+	.el-checkbox__input.is-checked .el-checkbox__inner {
+		background-color: $--color-primary;
+		border-color: $--color-primary;
+	}
+	.el-checkbox__input.is-focus .el-checkbox__inner {
+		border-color: $--color-primary;
+	}
+	.el-checkbox__inner:hover {
+		border-color: $--color-primary;
+	}
+	.el-checkbox__input.is-checked + .el-checkbox__label {
+		color: $--color-primary;
+	}
+	~.el-select-dropdown {
+		.el-select-dropdown__item {
+			color: $--color-primary;
+		}
+	}
+}
+
+
+
+

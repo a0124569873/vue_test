@@ -1,0 +1,98 @@
+.page-head-line { 
+    padding-bottom: 20px;
+    border-bottom: 2px solid #20A0FF;
+    color: #20A0FF;
+    margin:60px 0 40px 0;
+}
+.page-head-line h3{
+	font-size: 20px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.nav{
+	text-align: left;
+	margin-bottom: 20px;    
+	font-size: 16px;
+}
+.nav a{
+	font-size: 14px;
+}
+.nav a:hover{
+	color: #589dea;
+}
+.active{
+	color: #589dea;
+}
+.dashed_line{	
+	border-left: 1px dashed #bfcbd9;
+	margin: 0 8px;
+	vertical-align: middle;
+}
+
+.icon{
+	cursor: pointer;
+}
+.bule{
+	color: #20A0FF;
+}
+.bule_bg{
+	background: #20A0FF;
+	color: #ffffff;
+}
+.gray{
+	color: #C3BDBD;
+}
+.orange{
+    color: #f88c00;
+}
+.red{
+     color: #ef2f32;
+}
+.red_bg{
+     background: #ef2f32;
+	 color: #ffffff;
+}
+.purple_bg{
+	background: #5472EE;
+	 color: #ffffff;
+}
+.green{
+	color: #13CE66;
+}
+
+.border_left_none{
+    border-left: none;
+}
+
+.loading{
+	margin-top: -8px;
+	width: 14px;
+	animation: loading 1s infinite;
+}
+
+
+@keyframes loading{
+     from{
+		 transform: rotate(0)
+	 }
+	 to{
+		 transform:rotate(360deg)
+	 }
+}
+@-moz-keyframes loading{
+     from{
+		 transform: rotate(0)
+	 }
+	 to{
+		 transform:rotate(360deg)
+	 }
+}
+@-ms-keyframes loading{
+     from{
+		 transform: rotate(0)
+	 }
+	 to{
+		 transform:rotate(360deg)
+	 }
+}
