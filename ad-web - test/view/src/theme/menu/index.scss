@@ -1,0 +1,61 @@
+.vd-menu {
+  width: 200px;
+  li {
+    background: #ecf0f1;
+    line-height: 50px;
+    cursor: pointer;
+    a {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 30px;
+      font-size: 15px;
+    }
+  }
+}
+.vd-menu-item {
+  display: none;
+  background: #fff;
+  li {
+    text-align: left;
+    background: #fff;
+    padding: 0;
+    &:hover {
+      background: $vd-menu-hover;
+      color: #fff;
+    }
+    a {
+      padding-left:50px; 
+      font-size: 13px;
+    }
+  }
+  .vd-menu-active {
+    background:$vd-menu-active; 
+    color: #fff;
+  }
+}
+.showbtn {
+  animation: show .2s forwards;
+}
+
+.hidebtn {
+  animation: hide .2s forwards;
+}
+
+@keyframes show {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(90deg);
+  }
+}
+
+@keyframes hide {
+  from {
+      transform: rotate(90deg);
+  }
+  to {
+      transform: rotate(0deg);
+  }
+}

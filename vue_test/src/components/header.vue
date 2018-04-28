@@ -14,6 +14,8 @@
 
     </el-menu>
 
+    <el-button @click="sssss">退出登录</el-button>
+
     <!-- <router-view></router-view> -->
 
 
@@ -51,6 +53,11 @@ export default {
     
   },
   methods:{
+    sssss(){
+      console.error("adsfsdfsdf")
+      window.sessionStorage.setItem('login',false)
+      this.$router.push("/")
+    },
     toZxn(pathh){
       // this.$router.push(pathh);
       this.jumpTo(pathh);

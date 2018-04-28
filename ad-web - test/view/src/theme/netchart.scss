@@ -1,0 +1,77 @@
+.port-wrap{
+	margin: 30px 0 0 30px;
+	background: #ffffff;
+	padding-bottom: 30px;
+	min-height: 350px;
+	.body{
+  	position: relative;
+    min-height: 300px;     
+    overflow-y: scroll;
+		display: flex;
+		justify-content: space-between;
+    padding: 20px;
+  }   
+}
+.port-pic {
+	.port-title{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 10px;
+		word-wrap: break-word; 
+		font-size: 14px;
+	}
+	#portpic{
+	  vertical-align: top;
+	  display: inline-block;
+		width: 100%; 
+		height: 100%;
+	}
+	.ey{
+		width: 200px;
+		margin-bottom: 13px;
+		margin-left: 200px;
+		vertical-align:middle;
+		display: flex;
+		align-items: center;   
+	}
+	.ey1,
+	.ey2{
+	    width: 12px;
+	    height: 12px;
+	    display: inline-block;  
+	}
+	.ey1{
+		background: $quare-color;
+		margin-right: 5px;
+	}
+	.ey2{
+	  background: $quare-color-ed ;
+	  margin-left: 15px;
+		margin-right: 5px;
+	}
+
+
+}
+.port-table {
+	vertical-align: top;
+	margin-top: 15px;
+	table tr th{
+		width: 105px;
+	}
+	ul li:last-child {
+		border-bottom: 1px solid #dadde0;
+	}
+
+	table tbody tr td{
+		height: 27px;
+	}
+
+	table	tbody tr:nth-child(odd) td {
+		background: rgba(0,0,0,0);
+	}
+	table	tbody:nth-child(2n+1) tr td{
+		background: rgba(160,160,160,0.1);
+	}
+}
+

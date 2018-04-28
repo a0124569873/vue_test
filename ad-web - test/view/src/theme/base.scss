@@ -1,0 +1,290 @@
+
+.page-head-line {  
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 14px;
+  margin:30px 0 20px 0;
+  h3{
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    border-left:2px solid $primary-color;
+    padding: 0 10px;
+  }
+}
+.nav{
+  text-align: left;
+  margin-bottom: 20px;    
+  font-size: 16px;
+  .active{
+    color: $primary-color;
+  }
+  a{
+    font-size: 14px;
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}
+footer{
+  background-color: $primary-color;
+}
+.content{
+  background: $background-color;
+  border-top:5px solid $primary-color;
+  // width: 1000px;
+  box-sizing: border-box;
+  padding: 20px 40px 40px;
+  margin-bottom: 20px;
+  box-shadow: 2px 3px 2px #d2d2d2;
+}
+.label{
+  text-align: right;
+  padding-right:10px; 
+}
+.dashed_line{	
+  border-left: 1px dashed #bfcbd9;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+.icon{
+cursor: pointer;
+}
+.el-table--border th, .el-table--border td {
+  border-right: 1px solid #e6ebf5;
+}
+
+h4{
+  display: inline-block;
+  font-size:14px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.phover{
+  background: #f5f5f6;
+  border:2px solid #f5f5f6;
+  transition: 1s;
+}
+.phover:hover{
+  border:2px solid $vd-menu-active;
+  background: #ffffff;
+}
+.color-num{
+  color: $vd-menu-active;
+  font-size:14px;
+}
+::-webkit-scrollbar {  
+  width: 4px;
+  height: 5px;
+  background-color: rgba(70, 70, 70, .1)
+}  
+
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track{  
+  -webkit-box-shadow: inset 0 0 6px rgba(70, 70, 70, .1);
+  border-radius: 10px;  
+  background-color: #F5F5F5;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb{  
+  border-radius: 10px;  
+  -webkit-box-shadow: inset 0 0 6px rgba(70, 70, 70, .1);
+  background-color: #555;  
+}  
+
+.el-pager li,
+.el-pagination button.disabled {
+  background-color: transparent
+}
+// .btn-prev,
+// .btn-next {
+//   vertical-align: -7px;
+// }
+// .el-pager {
+//   vertical-align: 12px;
+// }
+
+.table-gradient-head {
+  background: linear-gradient(#f8f8f8, #e4e4e4);
+  height: 30px;
+}
+
+.thead-top-line {
+  border-top: 2px solid $primary-color
+}
+
+.thead-bottom-line {
+  border-bottom: 2px solid $primary-color ;
+}
+
+table {
+  width: 100% !important;
+  thead {
+    background: linear-gradient(#f8f8f8, #e4e4e4);
+    th,
+    span {
+      color: $primary-color;
+    }
+  }
+  th,
+  tr {
+    text-align: center;
+    line-height: 24px;
+    text-align: center;
+  }
+  tbody tr:nth-child(odd) td {
+    // background: rgba(160, 160, 160, 0.1);
+  }
+  tbody tr:last-child td {
+    // border-bottom: 1px solid $table-border-color;
+  }
+  td {
+    // border-left: 1px solid $table-border-color;
+    p,
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+  }
+}
+.el-table__body-wrapper {
+  overflow-x: hidden
+}
+.el-pagination {
+  text-align: center
+}
+
+ /* Aylen */
+.button {
+  border: none;
+  vertical-align: middle;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 1;
+}
+ .button.button--aylen {
+  overflow: hidden;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.button--aylen.button--inverted {
+  background: none;
+}
+
+.button--aylen::before,
+.button--aylen::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--aylen::before {
+  background: $primary-color;
+}
+
+.button--aylen::after {
+  background: $button-hover;
+}
+
+.button--aylen:hover {
+  color: #ffffff !important
+}
+
+.button--aylen:hover::before,
+.button--aylen:hover::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.button--aylen:hover::after {
+  -webkit-transition-delay: 0.175s;
+  transition-delay: 0.175s;
+}
+
+/************************* 模态提示框 *************************/
+~ .el-message-box__wrapper {
+  .el-message-box {
+    margin-top: -30px;
+    width: 600px;
+    padding-bottom: 0;
+    border-radius: 0;
+    border: none;
+    .el-message-box__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      height: 30px;
+      background-color: $modal-bg-color;
+      .el-message-box__title {
+        line-height: 30px;
+        font-size: 12px;
+        color: #fff;
+        margin-left: 10px;
+      }
+      .el-message-box__headerbtn {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-right: 10px;
+        .el-message-box__close {
+          color: #fff !important;
+        }
+      }
+    }
+    .el-message-box__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 160px !important;
+      font-size: 16px !important;
+      .el-message-box__message {
+        padding-left:0;
+        word-break: break-all;
+        p {
+          font-size: 16px;
+          margin-left:10px;
+        }
+      }
+      .el-message-box__status {
+          position: relative;
+          top: 0;
+          transform: translateY(0);
+      }
+    }
+    .el-message-box__btns {
+      display: flex;
+      justify-content: flex-end;
+      padding: 15px;
+      text-align: right;
+      // border-top: 1px solid #e5e5e5;
+      .el-button,
+      .el-button--primary {
+        width: 80px !important;
+        height: 30px !important;
+        color: #FFFFFF !important;
+        border-radius: 3px !important;
+        background-color: $modal-bg-color !important;
+        border-color: $modal-bg-color;
+        &:hover {
+          background-color: $button-hover !important;
+          border-color: $button-hover;
+        }
+      }
+    }
+  }
+ 
+}

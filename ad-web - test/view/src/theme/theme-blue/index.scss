@@ -1,0 +1,48 @@
+
+/* 改变主题色变量 */
+$--color-primary: #67b7ff;
+// $--dropdown-menuItem-hover-color: blue;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '../fonts';
+/* 颜色变量 */
+$primary-color:	#3898fe;
+$table-border-color: #c9e4ff;
+$background-color:#FFFFFF;
+$vd-menu-hover: #67b7ff;
+$vd-menu-active: #67b7ff;
+$quare-color: #69b6ff;
+$quare-color-ed: #f5a623;
+$modal-bg-color: #69b6ff;
+$button-hover: #3399ff;
+.theme-blue {
+	@import '../base.scss';
+	@import '../menu/index.scss';
+	@import '../header/index.scss';
+	@import '../modal/index.scss';
+	@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";
+	@import '../netchart.scss';
+	.protTitle {
+		display: flex;
+		justify-content: space-between;
+		background: rgba(103, 183, 255, 0.4);
+		margin-bottom: 20px;
+		padding: 5px 10px;
+		text-align: left;
+		border: 1px solid $primary-color;
+	}
+	~ul .el-dropdown-menu__item:not(.is-disabled):hover {
+		background-color: #bfcbd9;
+		color: $--color-primary;
+	}
+	~.el-select-dropdown {
+		.el-select-dropdown__item {
+			color: $--color-primary;
+		}
+	}
+}
+
+
+
+
+

@@ -22,7 +22,9 @@ export default {
     },
     mounted(){
       this.zxn = "fsdfdsf" 
-       
+     if (!(window.sessionStorage.getItem('login') === 'true')) {
+          this.$router.push("/login")
+        }
     },
     data(){
         return {

@@ -44,7 +44,7 @@ Vue.use(ElementUI)
 let mixin = {
   methods:{
     test_mixin:function () {
-      console.log("test_mixin ")
+      // console.log("test_mixin ")
     }
   }
 }
@@ -60,5 +60,9 @@ new Vue({
     this.test_mixin() 
   }
 })
+console.error(window.sessionStorage.getItem('login'))
+if (!(window.sessionStorage.getItem('login') === 'true')) {
+  router.push("/login")
+}
 
-router.push("/login")
+

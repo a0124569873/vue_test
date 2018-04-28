@@ -7,7 +7,7 @@
       <div class="login">
         <el-form :model="Form" ref="Form" :rules="rules2" class="demo-ruleForm">
           <el-form-item prop="user">
-            <el-input v-model="Form.user" placeholder="账号" auto-complete="" @focus="reset" class="account" size="small"></el-input>
+            <el-input v-model="Form.user" placeholder="账号" auto-complete="" @focus="reset" class="account" size="small" ></el-input>
           </el-form-item>
           <el-form-item prop="pass">
             <el-input v-model="Form.pass" placeholder="密码" auto-complete="" @focus="reset" type="password" size="small"></el-input>
@@ -17,6 +17,7 @@
             
           </el-form-item>
         </el-form>
+        <el-button @click="login(Form)">登&nbsp;录</el-button>
       </div>
     </div>
 
@@ -49,9 +50,9 @@ export default {
     return {
       errorMessage: '',
       Form: {
-        user: '',
-        pass: '',
-        code: ''
+        user: 'aaa',
+        pass: 'aaa',
+        code: 'aaa'
       },
       rules2: {
         pass: [{ validator: validatePass, trigger: 'blur'}],
@@ -72,7 +73,13 @@ export default {
     login(form){
       this.$refs.Form.validate(valid => {
         if (valid) {
-          alert("success")
+          window.sessionStorage.setItem('login',true)
+          console.error(window.sessionStorage.getItem('login'))
+          if (!(window.sessionStorage.getItem('login') === 'true')) {
+            this.$router.push("/login")
+          }else{
+            this.$router.push("/")
+          }
         }else{
           return false
         }
@@ -85,3 +92,33 @@ export default {
 
 }
 </script>
+
+<style scoped>
+  .wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: yellow;*/
+    position: absolute;
+  }
+  .context{
+    width: 400px;
+    padding-bottom: 90px;
+
+  }
+  .logos{
+    width: 40px;
+    margin-right: 10px;
+
+  }
+  .login{
+    background: #fff;
+    height: 300px;
+    margin-top: 50px;
+    border-radius: 3px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+</style>

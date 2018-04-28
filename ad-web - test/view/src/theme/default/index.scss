@@ -1,0 +1,76 @@
+
+/* 改变主题色变量 */
+$--color-primary: #FF8E7A;
+// $--dropdown-menuItem-hover-color: #FF8E7A;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '../fonts';
+@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+/* 颜色变量 */
+$primary-color:	#ae0918;
+$table-border-color:#f4cece;
+$background-color:#FFFFFF;
+$vd-menu-hover: #e74c3c;
+$vd-menu-active: #ffa595;
+$quare-color: #eb5940;
+$quare-color-ed: #f5a623;
+$modal-bg-color: #db3534;
+$button-hover: #b31313;
+.theme-red {
+	@import '../base.scss';
+	@import '../menu/index.scss';
+	@import '../header/index.scss';
+	@import '../modal/index.scss';
+	@import '../netchart.scss';
+	// ~ul .el-dropdown-menu__item {
+	// 	color: #FF8E7A
+	// }
+	.protTitle {
+		display: flex;
+		justify-content: space-between;
+		background: #ff8e7a21;
+		margin-bottom: 20px;
+		padding: 5px 10px;
+		text-align: left;
+		border: 1px solid $vd-menu-active;
+	}
+	~ul .el-dropdown-menu__item:not(.is-disabled):hover {
+		background-color: rgba(255, 142, 122, .1);
+		color: $--color-primary !important;
+	}
+	.el-input__inner:focus {
+		border-color: $--color-primary;
+	}
+	.el-tabs__item.is-active {
+		color: $--color-primary;
+	}
+	.el-tabs__active-bar {
+		background: $--color-primary;
+	}
+	.el-tabs__item:hover {
+		color: $--color-primary;
+	}
+	.el-checkbox__input.is-checked .el-checkbox__inner {
+		background-color: $--color-primary;
+		border-color: $--color-primary;
+	}
+	.el-checkbox__input.is-focus .el-checkbox__inner {
+		border-color: $--color-primary;
+	}
+	.el-checkbox__inner:hover {
+		border-color: $--color-primary;
+	}
+	.el-checkbox__input.is-checked + .el-checkbox__label {
+		color: $--color-primary;
+	}
+	~.el-select-dropdown {
+		.el-select-dropdown__item {
+			color: $--color-primary;
+		}
+	}
+}
+
+
+
+

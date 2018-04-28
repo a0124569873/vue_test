@@ -1,0 +1,8 @@
+stages:
+  - build
+auto_build:
+  stage: build
+  tags:
+    - mtd_web
+  script:
+    - bash script/auto_build.sh
