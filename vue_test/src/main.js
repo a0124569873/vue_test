@@ -14,10 +14,14 @@ import 'bootstrap/dist/js/bootstrap.min'
 
 import './theme/elui.less';
 
+import './theme/theme_red.less'
+
+import './theme/theme_blue.less'
+
 import store from './vuex/Stroe_test'
 
 
-
+Vue.prototype.theme = 'theme_red'
 
 // console.log($)
 

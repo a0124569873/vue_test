@@ -1,27 +1,35 @@
 <template>
-  <div class="wrap" @keydown.enter="login(Form)">
-    <div class="context">
-      <div>
-        <p><img src="./img/logo.png" alt="" class="logos"> 登录界面 </p>
+  <div>
+    <el-row>
+    <div class="wrap_login" @keydown.enter="login(Form)">
+      <div class="context_login">
+        <div>
+          <p><img src="./img/logo.png" alt="" class="logos"> 登录界面 </p>
+        </div>
+        <div class="login">
+          <el-form :model="Form" ref="Form" :rules="rules2" class="demo-ruleForm">
+            <el-form-item prop="user">
+              <el-input v-model="Form.user" placeholder="账号" auto-complete="" @focus="reset" class="el_item account" size="small" ></el-input>
+            </el-form-item>
+            <el-form-item prop="pass">
+              <el-input v-model="Form.pass" placeholder="密码" auto-complete="" @focus="reset" type="password" size="small" class="el_item"></el-input>
+            </el-form-item>
+            <el-form-item prop="code">
+              <el-input v-model="Form.code" placeholder="" class="el_item"></el-input>
+              
+            </el-form-item>
+          </el-form>
+          <el-button @click="login(Form)" class="login_btn">登&nbsp;录</el-button>
+        </div>
       </div>
-      <div class="login">
-        <el-form :model="Form" ref="Form" :rules="rules2" class="demo-ruleForm">
-          <el-form-item prop="user">
-            <el-input v-model="Form.user" placeholder="账号" auto-complete="" @focus="reset" class="account" size="small" ></el-input>
-          </el-form-item>
-          <el-form-item prop="pass">
-            <el-input v-model="Form.pass" placeholder="密码" auto-complete="" @focus="reset" type="password" size="small"></el-input>
-          </el-form-item>
-          <el-form-item prop="code">
-            <el-input v-model="Form.code" placeholder=""></el-input>
-            
-          </el-form-item>
-        </el-form>
-        <el-button @click="login(Form)">登&nbsp;录</el-button>
-      </div>
-    </div>
 
+    </div>
+    </el-row>
+    <el-row>
+      <el-button @click="switch_theme()">切换题</el-button>
+    </el-row>
   </div>
+  
 </template>
 <script>
 export default {
@@ -87,38 +95,23 @@ export default {
     },
     reset(){
       this.errorMessage = ''
+    },
+    switch_theme(){
+
+
+
+      // this.theme = this.theme === 'theme_blue' ? 'theme_red' : 'theme_red'
+
+      
+      
+      var theme = window.sessionStorage.getItem('theme')
+      console.error(theme)
+      theme = theme === 'theme_blue' ? 'theme_red' : 'theme_red'
+      $('#app').attr('class', theme)
+      widow.sessionStorage.setItem('theme',theme)
+      alert("sdfsdfsdf")
     }
   }
 
 }
 </script>
-
-<style scoped>
-  .wrap{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*background: yellow;*/
-    position: absolute;
-  }
-  .context{
-    width: 400px;
-    padding-bottom: 90px;
-
-  }
-  .logos{
-    width: 40px;
-    margin-right: 10px;
-
-  }
-  .login{
-    background: #fff;
-    height: 300px;
-    margin-top: 50px;
-    border-radius: 3px;
-    padding: 30px;
-    box-sizing: border-box;
-  }
-
-</style>
