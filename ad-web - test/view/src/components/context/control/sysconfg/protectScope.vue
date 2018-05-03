@@ -563,6 +563,7 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
+          console.log(this.selectArr)
           let ips = this.selectArr.map(item => {
             return item.ip
           }).join('|')

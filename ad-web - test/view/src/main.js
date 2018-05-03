@@ -54,29 +54,37 @@ Vue.prototype.$checkPermisstion = function (name) { // 权限校验
   }
 }
 
+store.state.login = true
+window.sessionStorage.setItem('login', true)
+window.sessionStorage.setItem('groupId', 1)
+window.sessionStorage.setItem('name', "admin")
+Vue.prototype.__ID__.id = 10
+Vue.prototype.__ID__.name = "admin"
+
+var cert = {'status': 'valid', 'id': '7b2d69413d410e8b', 'desc': '幻盾清洗设备测试证书', 'lang': 'chinese', 'licence_owner': '卫达安全', 'copy_right': '北京卫达信息技术有限公司', 'type': 'official', 'device_id': 'de0146dd308ac4f5', 'user': '卫达安全', 'model': '幻盾清洗设备', 'create_time': 1516263110, 'start_time': 1516263095, 'end_time': 1546272000, 'max_hosts': 111, 'max_flows': 100000, 'alive_time': 29734709, 'tick_count': 20558, 'utc_timestamp': 1516863193}
+store.state.cert = cert
+
+
 bootApp()
 beforeRouteHandler()
 
-if (window.sessionStorage.getItem('login') === 'true') {
+
+
+
+
+
+
+// if (window.sessionStorage.getItem('login') === 'true') {
+if (1) {
   store.state.login = true
-  getCertStatus()
+  // getCertStatus()
 } else {
-  indexService.islogin()
-    .then((res) => { 
-      if (res.errcode === 0) {
-        store.state.login = res.isLogin
-        window.sessionStorage.setItem('login', res.isLogin)
-        window.sessionStorage.setItem('groupId', res.group_id)
-        window.sessionStorage.setItem('name', res.username)
-        Vue.prototype.__ID__.id = res.group_id
-        Vue.prototype.__ID__.name = res.username
-        getCertStatus()
-      }
-    })
-    .fail(() => {
-      bootApp()
-      beforeRouteHandler()
-    })
+  store.state.login = true
+  window.sessionStorage.setItem('login', true)
+  window.sessionStorage.setItem('groupId', 10)
+  window.sessionStorage.setItem('name', "admin")
+  Vue.prototype.__ID__.id = 10
+  Vue.prototype.__ID__.name = "admin"
 }
 // 界面初始化
 function bootApp () {
@@ -109,12 +117,14 @@ function beforeRouteHandler () {
 }
 
 function getCertStatus () {
-  indexService.getCert()
-    .then((res) => {
-      if (res.errcode === 0) { 
-        // res.cert = {'status': 'invalid', 'id': '7b2d69413d410e8b', 'desc': '幻盾清洗设备测试证书', 'lang': 'chinese', 'licence_owner': '卫达安全', 'copy_right': '北京卫达信息技术有限公司', 'type': 'official', 'device_id': 'de0146dd308ac4f5', 'user': '卫达安全', 'model': '幻盾清洗设备', 'create_time': 1516263110, 'start_time': 1516263095, 'end_time': 1546272000, 'max_hosts': 111, 'max_flows': 100000, 'alive_time': 29734709, 'tick_count': 20558, 'utc_timestamp': 1516863193}
+  // indexService.getCert()
+  //   .then((res) => {
+      // if (res.errcode === 0) { 
+      if (1) { 
+        var res = {}
+        res.cert = {'status': 'valid', 'id': '7b2d69413d410e8b', 'desc': '幻盾清洗设备测试证书', 'lang': 'chinese', 'licence_owner': '卫达安全', 'copy_right': '北京卫达信息技术有限公司', 'type': 'official', 'device_id': 'de0146dd308ac4f5', 'user': '卫达安全', 'model': '幻盾清洗设备', 'create_time': 1516263110, 'start_time': 1516263095, 'end_time': 1546272000, 'max_hosts': 111, 'max_flows': 100000, 'alive_time': 29734709, 'tick_count': 20558, 'utc_timestamp': 1516863193}
         if (res.cert.status !== 'valid') {
-          router.push('/sysinfo')
+          router.push('/')
         } else {
           store.state.cert = res.cert
           // if (store.state.login === true) {
@@ -122,9 +132,9 @@ function getCertStatus () {
           // }
         }
       }
-    }).fail(() => {
-      bootApp()
-      beforeRouteHandler() 
-      router.push('/sysinfo')
-    })
+    // }).fail(() => {
+    //   bootApp()
+    //   beforeRouteHandler() 
+    //   router.push('/sysinfo')
+    // })
 }

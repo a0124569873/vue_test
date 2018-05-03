@@ -8,6 +8,9 @@
                   <li :class="{'vd-menu-active': $route.path ==='/control/netaddress' || $route.path ==='/control'}" @click.prevent.stop="jumpTo('/control/netaddress')">
                     <a><i class="el-icon-setting"></i>网络地址配置</a>
                   </li>
+                  <li :class="{'vd-menu-active': $route.path ==='/control/netaddress_c' || $route.path ==='/control'}" @click.prevent.stop="jumpTo('/control/netaddress_c')">
+                    <a><i class="el-icon-setting"></i>网络地址配置_C</a>
+                  </li>
                   <!-- <li :class="{'vd-menu-active': $route.path ==='/usermanage'}" @click.prevent.stop="jumpTo('/usermanage')">
                     <a><i class="el-icon-setting"></i>用户管理</a>
                   </li> -->
@@ -20,7 +23,7 @@
                     <a><i class="el-icon-setting"></i>全局参数配置</a>
                   </li>
                   <li :class="{'vd-menu-active': $route.path ==='/control/udpp'}" @click.stop="jumpTo('/control/udpp')">
-                    <a><i class="el-icon-setting"></i>udppp全局参数配置</a>
+                    <a><i class="el-icon-setting"></i>日志服务器配置</a>
                   </li>
                   <li :class="{'vd-menu-active': $route.path ==='/control/tcp'}" @click.prevent.stop="jumpTo('/control/tcp')">
                     <a><i class="el-icon-setting"></i>TCP端口保护</a>
@@ -48,6 +51,9 @@
                   <li :class="{'vd-menu-active': $checkPermisstion(__ID__.id) ? $route.path.includes('realtime') : $route.path.includes('/control/realtime')}" @click.prevent.stop="jumpTo('/control/realtime')">
                     <a><i class="el-icon-news"></i>综合监控</a>
                   </li>
+                  <li :class="{'vd-menu-active': $route.path ==='/control/realtime_c'}" @click.prevent.stop="jumpTo('/control/realtime_c')">
+                    <a><i class="el-icon-news"></i>综合监控_C</a>
+                  </li>
                   <li :class="{'vd-menu-active': $route.path ==='/control/sysstatus'}" @click.prevent.stop="jumpTo('/control/sysstatus')">
                     <a><i class="el-icon-news"></i>系统状态</a>
                   </li>
@@ -56,6 +62,9 @@
                   </li>
                   <li :class="{'vd-menu-active': $route.path ==='/control/hoststatus'}" @click.prevent.stop="jumpTo('/control/hoststatus')">
                     <a><i class="el-icon-news"></i>主机状态</a>
+                  </li>
+                  <li :class="{'vd-menu-active': $route.path ==='/control/hoststatus_c'}" @click.prevent.stop="jumpTo('/control/hoststatus_c')">
+                    <a><i class="el-icon-news"></i>主机状态_C</a>
                   </li>
                    <li :class="{'vd-menu-active': $route.path ==='/control/tmpblacklist'}" @click.prevent.stop="jumpTo('/control/tmpblacklist')">
                     <a><i class="el-icon-news"></i>临时黑名单</a>
@@ -98,8 +107,8 @@
         </div>
         <el-row>
             <el-col :span="24">
-              <router-view></router-view
-            ></el-col>
+              <router-view></router-view>
+            </el-col>
         </el-row>
     </div>
   </div>
@@ -126,6 +135,9 @@ export default {
       case '/control/netaddress':
         this.showIndex = 0
         return '网络地址管理'
+      case '/control/netaddress_c':
+        this.showIndex = 0
+        return '网络地址管理_C'
       case '/control/usermanage':
         this.showIndex = 0
         return '用户管理'
@@ -134,7 +146,7 @@ export default {
         return '全局参数配置'
       case '/control/udpp':
         this.showIndex = 1
-        return 'udpp全局参数配置'
+        return '日志服务器配置'
       case '/control/tcp':
         this.showIndex = 1
         return 'TCP端口保护'
@@ -182,6 +194,13 @@ export default {
           this.showIndex = 1
         }
         return '主机状态'
+      case '/control/hoststatus_c':
+        if (this.$checkPermisstion(this.__ID__.id)) {
+          this.showIndex = 2
+        } else {
+          this.showIndex = 1
+        }
+        return '主机状态_C'
       case '/control/tmpblacklist':
         if (this.$checkPermisstion(this.__ID__.id)) {
           this.showIndex = 2

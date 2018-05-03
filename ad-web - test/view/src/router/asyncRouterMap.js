@@ -25,6 +25,12 @@ const asyncRouterMap = [
             component: resolve => require(['@/components/context/control/sysconfg/netaddress'], resolve),
             meta: { admin: true, user: false }
           },
+          // 系统配置
+          {
+            path: 'netaddress_c',
+            component: resolve => require(['@/components/context/control/sysconfg/netaddress_c'], resolve),
+            meta: { admin: true, user: false }
+          },
           // 防御配置
           {
             path: 'globalconfig',
@@ -72,6 +78,12 @@ const asyncRouterMap = [
             component: resolve => require(['@/components/context/control/realtime'], resolve),
             meta: { admin: true, user: true }
           },
+          // 实时监控
+          {
+            path: 'realtime_c',
+            component: resolve => require(['@/components/context/control/realtime/realtime_c'], resolve),
+            meta: { admin: true, user: true }
+          },
           {
             path: 'realtime/:ip',
             component: resolve => require(['@/components/context/control/realtime'], resolve),
@@ -90,6 +102,11 @@ const asyncRouterMap = [
           {
             path: 'hoststatus',
             component: resolve => require(['@/components/context/control/realtime/hoststatus'], resolve),
+            meta: { admin: true, user: true }
+          },
+          {
+            path: 'hoststatus_c',
+            component: resolve => require(['@/components/context/control/realtime/hoststatus_c'], resolve),
             meta: { admin: true, user: true }
           },
           {

@@ -15,6 +15,7 @@
     </el-menu>
 
     <el-button @click="sssss">退出登录</el-button>
+    <el-checkbox label="dfsadasdasdas"></el-checkbox>
 
     <!-- <router-view></router-view> -->
 
