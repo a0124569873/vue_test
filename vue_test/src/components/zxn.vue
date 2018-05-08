@@ -17,13 +17,20 @@
       </p>
 
       <div class="fff">
-        <div class="ff1"></div>
+        <div class="ff1"> rwe2342341232131231231232131231231sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfrwerwe</div>
+        <div class="ff2">werwerretertre512fdg5fd7gre12fd1v5df4g5r1et2f1dg5fe45t1ret4re51tewr</div>
+        <div class="ff3">werwersdfsdfsdfsdfsdfsdfcxvcxvetertdffdvfdgertersdvsfwer</div>
+        <div class="ff4">ewrwerwerwesdfsdfsdfrfrerrwetetyrthfgnfnncbncghfghrtgdfbvbdfgdfgdgertertrew</div>
+        <div class="ff5">wrwerwerwerwerwerwerwdfgretretredfvdfgdfg4354g53fd8g74g5f4g5re45terwerwer</div>
+      </div>
+      <div class="ff1"></div>
+      <div class="fff1">
+        <div class="ff1"> </div>
         <div class="ff2"></div>
         <div class="ff3"></div>
         <div class="ff4"></div>
         <div class="ff5"></div>
       </div>
-
       <div class="ff1"></div>
 
   </div>
@@ -125,11 +132,53 @@ export default {
 <style rel="stylesheet/less" lang="less">
   .fff{
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-color: red;
     display: flex;
-    justify-content: space-around;
-    justify-content: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: col nowrap;
+    .ff1{
+      // width: 50px;
+      height: 50px;
+      background-color: yellow;
+    }
+    .ff2{
+      // width: 50px;
+      height: 50px;
+      background-color: rgb(19, 233, 108);
+    }
+    .ff3{
+      // width: 50px;
+      height: 50px;
+      background-color: rgb(20, 22, 4);
+    }
+    .ff4{
+      // width: 50px;
+      height: 50px;
+      background-color: rgb(19, 33, 233);
+    }
+    .ff5{
+      // width: 50px;
+      height: 50px;
+      background-color: rgb(155, 19, 233);
+    }
+  }
+    .fff1{
+    width: 100%;
+    height: 300px;
+    background-color: red;
+    display: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    // flex-flow: row nowrap;
+    justify-content: space-evenly;
+    // align-items: center;//baseline;flex-end;//center;
+    // align-content: space-between;
+    // order: 1;
+    // flex-grow: 5;
+    align-self: center;
+    flex-basis: 100em;
     .ff1{
       width: 50px;
       height: 50px;
