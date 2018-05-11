@@ -49,9 +49,3 @@ export default {
 	}
 }
 </script>
-<style>
-	.header{
-		display: flex;
-		justify-content: space-between;
-	}
-</style>

@@ -9,11 +9,11 @@ export default new Router({
       children: [
         {
           path: "/",
-          component: resolve => require(['@/components/content/main'], resolve)
+          component: resolve => require(['@/components/content/homepage'], resolve)
         },
         {
-          path: "/main",
-          component: resolve => require(['@/components/content/main'], resolve)
+          path: "/homepage",
+          component: resolve => require(['@/components/content/homepage'], resolve)
         },
         {
           path: "/leftbar",
@@ -38,9 +38,17 @@ export default new Router({
             {
               path: '/usersetting',
               component: resolve => require(["@/components/content/leftbar/usersetting"], resolve)
-            },
+            }
           ]
         },
+        {
+          path: "/login",
+          component: resolve => require(["@/components/content/user/login"], resolve)
+        },
+        {
+          path: "/register",
+          component: resolve => require(["@/components/content/user/register"], resolve)
+        }
       ]
     }
   ]
