@@ -20,8 +20,8 @@ export default {
 			var p = new Promise(function(resolve, reject) {
 				setTimeout(() => {
 					console.log('cooked')
-					// resolve('apple')
-					reject('reject!')
+					resolve('apple')
+					// reject('reject!')
 				}, 1000);
 			})
 			return p

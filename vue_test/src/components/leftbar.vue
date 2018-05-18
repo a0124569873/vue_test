@@ -14,7 +14,7 @@
                     <el-menu-item index="6" @click="toh()">six_heighchart</el-menu-item>
                     <el-menu-item index="7" @click="toi()">seven_组件</el-menu-item>
                     <el-menu-item index="8" @click="toj()">eight_css</el-menu-item>
-                    <el-menu-item index="9" @click="tok()">nine_test</el-menu-item>
+                    <el-menu-item index="9" @click="tok()">nine_promise</el-menu-item>
                     <el-menu-item index="10" @click="tol()">nine_html</el-menu-item>
                 </el-menu>
             </el-col>
