@@ -26,7 +26,8 @@
     </div>
     </el-row>
     <el-row>
-      <el-button @click="switch_theme()">切换题</el-button>
+      <el-button @click="switch_theme('red')">切换红色主题</el-button>
+      <el-button @click="switch_theme('blue')">切换蓝色主题</el-button>
     </el-row>
   </div>
   
@@ -81,13 +82,9 @@ export default {
     login(form){
       this.$refs.Form.validate(valid => {
         if (valid) {
-          window.sessionStorage.setItem('login',true)
-          console.error(window.sessionStorage.getItem('login'))
-          if (!(window.sessionStorage.getItem('login') === 'true')) {
-            this.$router.push("/login")
-          }else{
-            this.$router.push("/")
-          }
+          window.localStorage.setItem('login',true)
+          console.error(window.localStorage.getItem('login'))
+          this.$router.push("/")
         }else{
           return false
         }
@@ -96,20 +93,14 @@ export default {
     reset(){
       this.errorMessage = ''
     },
-    switch_theme(){
-
-
+    switch_theme(theme_color){
 
       // this.theme = this.theme === 'theme_blue' ? 'theme_red' : 'theme_red'
+      // var theme = window.localStorage.getItem('theme')
 
-      
-      
-      var theme = window.sessionStorage.getItem('theme')
-      console.error(theme)
-      theme = theme === 'theme_blue' ? 'theme_red' : 'theme_red'
-      $('#app').attr('class', theme)
-      widow.sessionStorage.setItem('theme',theme)
-      alert("sdfsdfsdf")
+      $('#app').attr('class', 'theme_' + theme_color)
+      widow.localStorage.setItem('theme', 'theme_' + theme_color)
+
     }
   }
 

@@ -1,7 +1,7 @@
 <template>
-    <div id="leftbar" style="height: 100%">
-        <el-row class="tac">
-            <el-col :span="3" style="height: 100%">
+    <div id="leftbar">
+        <el-row class="tac" >
+            <el-col :span="3">
                 <el-menu
                 default-active="1"
                 background-color="#E74C3C"
@@ -18,10 +18,16 @@
                     <el-menu-item index="10" @click="tol()">nine_html</el-menu-item>
                 </el-menu>
             </el-col>
-            <el-col :span="12">
+            <el-col :span="21">
 
-            ROUTER_NAME: <a id="ta">{{texxtt}}</a>
-            <router-view></router-view>
+            <div class='leftbar-title'>
+                ROUTER_NAME: <a id="ta">{{texxtt}}</a>
+            </div>
+
+            <div class='leftbar-content'>
+                <router-view ></router-view>
+            </div>
+            
 
             </el-col>
         </el-row>
@@ -40,38 +46,40 @@ export default {
 
             let table_name = path.split("/")[2]
 
-            switch (table_name) {
-                case "charts":
-                    return "Echart"
-                    break;
-                case "dialog":
-                    return "dialog"
-                    break;
-                case "g2chart":
-                    return "g2chart"
-                    break;
-                case "bootstrap":
-                    return "bootstrap"
-                    break;
-                case "elui":
-                    return "elui"
-                    break;
-                case "heighchart":
-                    return "heighchart"
-                    break;
-                case "father":
-                    return "father"
-                    break;
-                case "testcss":
-                    return "testcss"
-                    break;
-                case "promise":
-                    return "promise"
-                    break;
+            return path
+
+            // switch (table_name) {
+            //     case "charts":
+            //         return "Echart"
+            //         break;
+            //     case "dialog":
+            //         return "dialog"
+            //         break;
+            //     case "g2chart":
+            //         return "g2chart"
+            //         break;
+            //     case "bootstrap":
+            //         return "bootstrap"
+            //         break;
+            //     case "elui":
+            //         return "elui"
+            //         break;
+            //     case "heighchart":
+            //         return "heighchart"
+            //         break;
+            //     case "father":
+            //         return "father"
+            //         break;
+            //     case "testcss":
+            //         return "testcss"
+            //         break;
+            //     case "promise":
+            //         return "promise"
+            //         break;
             
-                default:
-                    break;
-            }
+            //     default:
+            //         break;
+            // }
 
 
         }
@@ -103,6 +111,9 @@ export default {
       },
       tok(){
           this.jumpTo('/leftbar/promise');
+      },
+      tol(){
+          this.jumpTo('/leftbar/gstatus');
       }
   }
 }

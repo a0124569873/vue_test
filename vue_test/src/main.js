@@ -53,6 +53,25 @@ let mixin = {
   }
 }
 
+router.beforeEach((to, from, next) => {
+  console.log(to.path)
+  if (!(window.localStorage.getItem('login') === 'true')) {
+    
+    if (to.path !== '/login'){
+      next("/login")
+    }else{
+      next()
+    }
+  }else{
+    if(to.path === '/login' ){
+      next(from.path)
+    }else{
+      next()
+    }
+    
+  }
+})
+
 new Vue({
   mixins:[mixin],
   el: '#app',
@@ -64,9 +83,9 @@ new Vue({
     this.test_mixin() 
   }
 })
-console.error(window.sessionStorage.getItem('login'))
-if (!(window.sessionStorage.getItem('login') === 'true')) {
-  router.push("/login")
-}
+// console.error(window.sessionStorage.getItem('login'))
+// if (!(window.sessionStorage.getItem('login') === 'true')) {
+//   router.push("/login")
+// }
 
 

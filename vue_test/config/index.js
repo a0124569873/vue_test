@@ -15,6 +15,11 @@ module.exports = {
         target: 'http://test.js.com/',
         secure: false,
         changeOrigin: true
+      },
+      '/stats':{
+        target: 'http://yb.zxn.com/',
+        secure: false,
+        changeOrigin: true
       }
     },
 

@@ -38,6 +38,9 @@ export default {
     components:{
         buju
     },
+    mounted(){
+        console.log(this.$route.query.ip)
+    },
     data(){
         return{
             show:true,

@@ -3,7 +3,9 @@
       <headerbar
       :zzxn="zxn"
       ></headerbar>
+      <!-- <div style="display: flex;"> -->
       <router-view></router-view>
+      <!-- </div> -->
       <!-- <systeminfo/> -->
       <footer11/>
   </div>
@@ -22,9 +24,6 @@ export default {
     },
     mounted(){
       this.zxn = "fsdfdsf" 
-     if (!(window.sessionStorage.getItem('login') === 'true')) {
-          this.$router.push("/login")
-        }
     },
     data(){
         return {

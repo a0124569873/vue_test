@@ -173,7 +173,7 @@ export default {
     // flex-wrap: nowrap;
     // flex-flow: row nowrap;
     justify-content: space-evenly;
-    // align-items: center;//baseline;flex-end;//center;
+    align-items: center;//baseline;flex-end;//center;
     // align-content: space-between;
     // order: 1;
     // flex-grow: 5;
@@ -183,26 +183,31 @@ export default {
       width: 50px;
       height: 50px;
       background-color: yellow;
+      flex-grow: 1;
     }
     .ff2{
       width: 50px;
       height: 50px;
       background-color: rgb(19, 233, 108);
+      flex-grow: 1;
     }
     .ff3{
       width: 50px;
       height: 50px;
       background-color: rgb(20, 22, 4);
+      flex-grow: 1;
     }
     .ff4{
       width: 50px;
       height: 50px;
       background-color: rgb(19, 33, 233);
+      flex-grow: 1;
     }
     .ff5{
       width: 50px;
       height: 50px;
       background-color: rgb(155, 19, 233);
+      flex-grow: 1;
     }
   }
   .ff1 {

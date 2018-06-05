@@ -55,9 +55,10 @@ export default {
   },
   methods:{
     sssss(){
-      console.error("adsfsdfsdf")
-      window.sessionStorage.setItem('login',false)
-      this.$router.push("/")
+      // console.error("adsfsdfsdf")
+      window.localStorage.setItem('login',false)
+      this.$router.push("/login")
+      console.log("1111111111111111111111111111")
     },
     toZxn(pathh){
       // this.$router.push(pathh);

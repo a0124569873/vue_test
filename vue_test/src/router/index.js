@@ -15,6 +15,7 @@ import testcss from '@/components/testcss'
 import promise from '@/components/promise'
 import menuitem from '@/components/menuitem'
 import login from '@/components/login'
+import gstatus from '@/components/gstatus'
 
 Vue.use(Router)
 
@@ -133,6 +134,10 @@ export default new Router({
               path: 'promise',
               name: 'promise',
               component: promise
+            },
+            {
+              path: 'gstatus',
+              component: gstatus
             }
           ]
         }
