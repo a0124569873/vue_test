@@ -12,12 +12,9 @@ import echarts from 'echarts'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
 
-import './theme/elui.less';
-
+import './theme/elui.less'
 import './theme/theme_red.less'
-
 import './theme/theme_blue.less'
-
 import store from './vuex/Stroe_test'
 
 

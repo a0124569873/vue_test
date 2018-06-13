@@ -1,0 +1,144 @@
+{
+  "line": [
+    {
+      "text": "海外",
+      "value": "0",
+      "ip_count": {"text": "1个", "value": "1", "unit": "个"},
+      "base_bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"}
+      ],
+      "normal_bandwidth": [
+        {"text": "10M", "value": "10", "unit": "M"},
+        {"text": "20M", "value": "20", "unit": "M"},
+        {"text": "30M", "value": "30", "unit": "M"},
+        {"text": "40M", "value": "40", "unit": "M"}
+      ],
+      "bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"}
+      ],
+      "site_count": {"min": 50, "max": 200, "step": 1},
+      "port_count": {"min": 50, "max": 200, "step": 1}
+    },
+    {
+      "text": "电信、联通",
+      "value": "3",
+      "ip_count": {"text": "2个", "value": "2", "unit": "个"},
+      "base_bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"}
+      ],
+      "normal_bandwidth": [
+        {"text": "10M", "value": "10", "unit": "M"},
+        {"text": "20M", "value": "20", "unit": "M"},
+        {"text": "30M", "value": "30", "unit": "M"},
+        {"text": "40M", "value": "40", "unit": "M"}
+      ],
+      "bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"}
+      ],
+      "site_count": {"min": 50, "max": 200, "step": 1},
+      "port_count": {"min": 50, "max": 200, "step": 1}
+    },
+    {
+      "text": "电信、联通和移动",
+      "value": "7",
+      "ip_count": {"text": "3个", "value": "3", "unit": "个"},
+      "base_bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"},
+        {"text": "50Gb", "value": "50", "unit": "Gb"},
+        {"text": "60Gb", "value": "60", "unit": "Gb"},
+        {"text": "70Gb", "value": "70", "unit": "Gb"}
+      ],
+      "normal_bandwidth": [
+        {"text": "10M", "value": "10", "unit": "M"},
+        {"text": "20M", "value": "20", "unit": "M"},
+        {"text": "30M", "value": "30", "unit": "M"},
+        {"text": "40M", "value": "40", "unit": "M"},
+        {"text": "50M", "value": "50", "unit": "M"},
+        {"text": "60M", "value": "60", "unit": "M"},
+        {"text": "70M", "value": "70", "unit": "M"},
+        {"text": "80M", "value": "80", "unit": "M"}
+      ],
+      "bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"},
+        {"text": "50Gb", "value": "50", "unit": "Gb"}
+      ],
+      "site_count": {"min": 50, "max": 200, "step": 1},
+      "port_count": {"min": 50, "max": 200, "step": 1}
+    },
+    {
+      "text": "BGP",
+      "value": "8",
+      "ip_count": {"text": "1个", "value": "1", "unit": "个"},
+      "base_bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"}
+      ],
+      "normal_bandwidth": [
+        {"text": "10M", "value": "10", "unit": "M"},
+        {"text": "20M", "value": "20", "unit": "M"},
+        {"text": "30M", "value": "30", "unit": "M"},
+        {"text": "40M", "value": "40", "unit": "M"}
+      ],
+      "bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"}
+      ],
+      "site_count": {"min": 50, "max": 200, "step": 1},
+      "port_count": {"min": 50, "max": 200, "step": 1}
+    },
+    {
+      "text": "电信、联通和BGP",
+      "value": "11",
+      "ip_count": {"text": "3个", "value": "3", "unit": "个"},
+      "base_bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"}
+      ],
+      "normal_bandwidth": [
+        {"text": "10M", "value": "10", "unit": "M"},
+        {"text": "20M", "value": "20", "unit": "M"},
+        {"text": "30M", "value": "30", "unit": "M"},
+        {"text": "40M", "value": "40", "unit": "M"}
+      ],
+      "bandwidth": [
+        {"text": "10Gb", "value": "10", "unit": "Gb"},
+        {"text": "20Gb", "value": "20", "unit": "Gb"},
+        {"text": "30Gb", "value": "30", "unit": "Gb"},
+        {"text": "40Gb", "value": "40", "unit": "Gb"}
+      ],
+      "site_count": {"min": 50, "max": 200, "step": 1},
+      "port_count": {"min": 50, "max": 200, "step": 1}
+    }
+  ],
+  "ord_time": [
+    {"text": "1个月", "value": "1:month", "unit":"month"},
+    {"text": "2个月", "value": "2:month", "unit":"month"},
+    {"text": "3个月", "value": "3:month", "unit":"month"},
+    {"text": "4个月", "value": "4:month", "unit":"month"},
+    {"text": "5个月", "value": "5:month", "unit":"month"},
+    {"text": "6个月", "value": "6:month", "unit":"month"},
+    {"text": "1年", "value": "1:year", "unit":"year"},
+    {"text": "2年", "value": "2:year", "unit":"year"},
+    {"text": "3年", "value": "3:year", "unit":"year"}
+  ]
+}

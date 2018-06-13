@@ -3,20 +3,26 @@
         <el-row class="tac" >
             <el-col :span="3">
                 <el-menu
+                router
+                :collapse="collapsed"
                 default-active="1"
                 background-color="#E74C3C"
                 active-text-color="#FFA595">
-                    <el-menu-item index="1" @click="toc()">first_chart</el-menu-item>
-                    <el-menu-item index="2" @click="tod()">second_dialog</el-menu-item>
-                    <el-menu-item index="3" @click="toe()">third_g2chart</el-menu-item>
-                    <el-menu-item index="4" @click="tof()">four_bootstrap</el-menu-item>
-                    <el-menu-item index="5" @click="tog()">five_elementui</el-menu-item>
-                    <el-menu-item index="6" @click="toh()">six_heighchart</el-menu-item>
-                    <el-menu-item index="7" @click="toi()">seven_组件</el-menu-item>
-                    <el-menu-item index="8" @click="toj()">eight_css</el-menu-item>
-                    <el-menu-item index="9" @click="tok()">nine_promise</el-menu-item>
-                    <el-menu-item index="10" @click="tol()">nine_html</el-menu-item>
+                    <el-menu-item index="/leftbar/charts" >first_chart</el-menu-item>
+                    <el-menu-item index="/leftbar/dialog" >second_dialog</el-menu-item>
+                    <el-menu-item index="/leftbar/g2chart" >third_g2chart</el-menu-item>
+                    <el-menu-item index="/leftbar/bootstrap" >four_bootstrap</el-menu-item>
+                    <el-menu-item index="/leftbar/elui" >five_elementui</el-menu-item>
+                    <el-menu-item index="/leftbar/heighchart" >six_heighchart</el-menu-item>
+                    <el-menu-item index="/leftbar/father" >seven_组件</el-menu-item>
+                    <el-menu-item index="/leftbar/testcss" >eight_css</el-menu-item>
+                    <el-menu-item index="/leftbar/promise" >nine_promise</el-menu-item>
+                    <el-menu-item index="/leftbar/gstatus" >nine_gstatus</el-menu-item>
                 </el-menu>
+                <a class="toggle"
+                    @click="expand">
+                    <i class="el-icon-arrow-left"></i>
+                </a>
             </el-col>
             <el-col :span="21">
 
@@ -38,6 +44,12 @@
 <script>
 export default {
     name:'leftbar_components',
+    data(){
+        return {
+            collapsed: false,
+
+        }
+    },
     computed:{
         texxtt:function(){
             let path = this.$route.path
@@ -85,35 +97,8 @@ export default {
         }
     },
   methods:{
-      toc(){
-          this.jumpTo('/leftbar/charts')
-      },
-      tod(){
-          this.jumpTo('/leftbar/dialog')
-      },
-      toe(){
-          this.jumpTo('/leftbar/g2chart');
-      },
-      tof(){
-          this.jumpTo('/leftbar/bootstrap');
-      },
-      tog(){
-          this.jumpTo('/leftbar/elui');
-      },
-      toh(){
-          this.jumpTo('/leftbar/heighchart');
-      },
-      toi(){
-          this.jumpTo('/leftbar/father');
-      },
-      toj(){
-          this.jumpTo('/leftbar/testcss');
-      },
-      tok(){
-          this.jumpTo('/leftbar/promise');
-      },
-      tol(){
-          this.jumpTo('/leftbar/gstatus');
+      expand(){
+          this.collapsed = !this.collapsed
       }
   }
 }

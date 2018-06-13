@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <title>幻盾DDOS动态防御系统-注册</title>
+    <link rel="shortcut icon" href="/static/fonts/favicon.ico" />
+    <style>
+        *,::after,::before{box-sizing:border-box}
+        html{background-color:#fff;color:#333;font-family:"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+        html,body{height:100%;background:#f5f5f6;}
+        blockquote,body,dd,dl,figure,h1,h2,h3,h4,h5,h6,p,pre{margin:0}
+        button,input,legend,textarea{padding:0}
+        fieldset,form,ol,td,th,ul{margin:0;padding:0}
+        ul{list-style:none}
+        a{text-decoration: none;}
+        a:link{color:#00c1de;}
+        a:visited{color:#00b7d3;}
+        .register-topbar{position:relative;height:60px;border-bottom:1px solid #d7d8d9;background-color: #f5f5f6;}
+        .register-topbar-logo{position:absolute;left:20px;height:59px;line-height:59px}
+        .register-topbar-logo img{width: 40px;height: 40px;vertical-align:middle}
+        .register-topbar-logo span{position:relative;top:2px;margin-left:5px;color:#333;font-size:20px;line-height:1;vertical-align:middle}
+        .register-body{padding:80px 0;background-color:#f5f5f6;text-align:center}
+        .register-body-box{position:relative;margin: 0 auto;padding:40px 0;width:1000px;background: #fff;}
+        .register-form{width:320px;margin: 0 auto;margin-top:40px;text-align: center;}
+        .register-form-title{font-size:30px;letter-spacing:1px;line-height:36px;color:#373D41;}
+        .register-form-tips{position:absolute;top:43px;right:40px;font-size:12px;color:#73777a;letter-spacing:.4px;line-height:30px;text-align:left;}
+        .register-error{display:none;margin-top:16px;margin-bottom:16px;padding:5px 10px;border:1px solid #f15532;background-color:#feeeeb;color:#f15532;text-align:left;font-size:14px}
+        .icon-error{display:inline-block;width:16px;height:16px;background:url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlLz48L2RlZnM+PHBhdGggZD0iTTUxMiA5NDcuMkMyNzEuMzYgOTQ3LjIgNzYuOCA3NTIuNjQgNzYuOCA1MTJTMjcxLjM2IDc2LjggNTEyIDc2LjggOTQ3LjIgMjcxLjM2IDk0Ny4yIDUxMiA3NTIuNjQgOTQ3LjIgNTEyIDk0Ny4yTTUxMiAwQzIzMC40IDAgMCAyMzAuNCAwIDUxMnMyMzAuNCA1MTIgNTEyIDUxMiA1MTItMjMwLjQgNTEyLTUxMlM3OTMuNiAwIDUxMiAwIiBmaWxsPSIjRjE1NTMzIi8+PHBhdGggZD0iTTcxNi44IDM1My4yOGwtNjEuNDQtNDYuMDhMNTEyIDQ1NS42OCAzNjguNjQgMzA3LjJsLTYxLjQ0IDQ2LjA4TDQ1NS42OCA1MTIgMzA3LjIgNjY1LjZsNjEuNDQgNTEuMkw1MTIgNTY4LjMyIDY1NS4zNiA3MTYuOGw2MS40NC01MS4yTDU2My4yIDUxMnoiIGZpbGw9IiNGMTU1MzMiLz48L3N2Zz4=);background-position:0 0;background-size:16px 16px;vertical-align:-3px}
+        .notice{padding:4px 8px}
+        .register-loading{display:none;position:absolute;top:0;left:0;width:100%;height:100%}
+        .loading-icon{position:absolute;top:0;left:0;z-index:2;width:100%;height:100%;background:url(/image/ajax-loader-16x16.gif) no-repeat center center}
+        .loading-mask{position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background-color:#fff;opacity:.8}
+        .form-content .form-input{display:block;margin-bottom:20px;padding:0 10px;width:100%;height:42px;outline:0;border:1px solid #d7d8d9;background-color:#fff;color:#595959;font-size:12px;line-height:42px}
+        .code{overflow:hidden}
+        .code .form-input{float:left;margin-right:3px;width:181px;}
+        .code img{cursor:pointer}
+        .form-content .form-input:focus,.form-content .form-input:hover,.form-input-single:focus, .form-input-single:hover{border:1px solid #00c1de}
+        .form-submit{display:block;width:100%;height:40px;outline:0;border:1px solid #00c1de;border-radius:0;background-color:#00c1de;box-shadow:0 1px 1px #ebe7e6;color:#fff;text-align:center;font-weight:700;font-size:14px;line-height:40px;cursor:pointer}
+        .form-submit:hover{border-color:#00b7d3;background-color:#00b7d3}
+        .register-other{overflow:hidden;margin-top:10px;text-align:right;zoom:1}
+        .register-other a{color:#989ea0;text-decoration:none;font-size:12px;cursor:pointer}
+        .register-other a:hover{color:#00c1de}
+        .footer{padding:20px;background-color:#373d41}
+        .footer-inner{margin-top:10px;margin-right:auto;margin-left:auto;width:1200px;color:#73777a;font-size:14px}
+        .footer-inner .big{margin-bottom:32px}
+        .footer-inner .big a{margin-right:35px;color:#9b9ea0;text-decoration:none;font-size:16px;-webkit-transition:color .3s;transition:color .3s}
+        .footer-inner .big a:hover{color:#28d0e9}
+        .copyright{margin-top:10px;color:#73777a;font-size:14px}
+        .register{position:relative;min-height:100%;margin-bottom:-150px;padding-bottom: 150px;}
+        .footer{margin-top:-150px;height:150px;}
+        .form-input-mobile{margin-bottom:20px;width:100%;height:42px;}
+        .form-input-group{width:100%;height:100%;color:#373d41;font-size:12px;line-height:1.28571;display:inline-table;border-collapse:separate;border-spacing:0;}
+        .form-input-addon{display:table-cell;padding:0 8px;vertical-align:middle;border-radius:0;width:48px;background:#fff;font-size:14px;height:40px;line-height:38px;white-space:nowrap;color:#9b9ea0;font-weight: 400;text-align: center;border:1px solid #c3c5c6;}
+        .form-input-addon:first-child{border-right: 0;}
+        .form-input-addon-before{border-bottom-right-radius: 0;border-top-right-radius: 0;}
+        .form-input-single{display:inline-table;border-collapse:separate;margin-top:0;padding:0 8px;width:100%;height:100%;color: #595959;font-size:12px;outline:none;overflow:visible;border:1px solid #ebecec;border-spacing:0;background-color:#fff;transition:all .3s ease-out;border-radius:0;border-color:#c3c5c6;}
+        #register-success{display:none;margin: 100px auto;color:#35b34a;font-size:18px;}
+      }
+      </style>
+  </head>
+
+  <body>
+    <div class="register">
+      <div class="register-topbar">
+        <a class="register-topbar-logo">
+          <img src="/static/img/dun.png">
+          <span>幻盾DDOS动态防御系统</span>
+        </a>
+      </div>
+
+      <div class="register-body">
+        <div class="register-body-box">
+          <div class="register-form-title">欢迎注册幻盾</div>
+          <div class="register-form-tips">
+            <span>已有幻盾账号？</span>
+            <a href="/login">快捷登录</a>
+          </div>
+
+          <form class="register-form">
+            <div class="register-error">
+              <span class="icon-error"></span>
+              <span class="notice"></span>
+            </div>
+
+            <div id="js-register-loading" class="register-loading">
+              <div class="loading-icon"></div>
+              <div class="loading-mask"></div>
+            </div>
+
+            <div class="form-content">
+              <input class="form-input" placeholder="设置邮箱，必填" id="js-email" name="email" tabindex="1" autofocus>
+              <!-- <input class="form-input" placeholder="设置昵称，长度为1-32个字符" id="js-nickname" name="nickname" tabindex="2" autofocus> -->
+              <input class="form-input" type="password" placeholder="设置你的登录密码，长度至少为8位，必填" id="js-password" name="password" tabindex="3">
+              <input class="form-input" type="password" placeholder="请再次输入你的密码，长度至少为8位，必填" id="js-password-confirm" name="passwordConfirm" tabindex="4">
+              <div class="form-input-mobile">
+                <span class="form-input-group">
+                  <span class="form-input-addon form-input-addon-before">+86</span>
+                    <input class="form-input-single" placeholder="请输入手机号码，必填" id="js-mobile" maxlength="11" height="100%" tabindex="5">
+                </span>
+              </div>
+              <!-- <input class="form-input" type="password" placeholder="QQ" id="js-qq" name="passwordConfirm" tabindex="6"> -->
+              <div class="code">
+                  <input class="form-input code" placeholder="验证码" id="js-code" name="usercode" tabindex="7">
+                  <img src="/captcha.html" id="js-code-img" onclick="newCode">
+              </div>
+              <input type="submit" class="form-submit" id="js-submit" value="注册">
+            </div>
+          </form>
+
+          <div id="register-success">
+            注册成功！<span id="time">3</span>秒后跳转到登录页面...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-inner">
+        <p class="big">
+          <a href="#">关于我们</a>
+          <a href="#">法律声明及隐私权政策</a>
+          <a href="#">联系我们</a>
+        </p>
+
+        <div class="copyright">
+          <p>北京卫达科技有限公司版权所有 Copyright © 2015-2018</p>
+          <p>www.veda.com</p>
+        </div>
+      </div>
+    </div>
+    <script src="/static/jquery.min.js"></script>
+    <script>
+      var blankReg = /^\s*$/
+      var emailReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+      // var nicknameReg = /^[\w\u4e00-\u9fa5-]{1,32}$/
+      var pwdReg = /^[\w.]{8,}$/
+      var mobileReg = /^1[34578]\d{9}$/
+      // var qqReg = /^[1-9][0-9]{4,14}$/
+
+      function checkValid() {
+        var email = $('#js-email').val()
+        // var nickname = $('#js-nickname').val()
+        var pwd = $('#js-password').val()
+        var pwd2 = $('#js-password-confirm').val()
+        var mobile = $('#js-mobile').val()
+        // var qq = $('#js-qq').val()
+        var code = $('#js-code').val()
+
+        if (blankReg.test(email)) {
+          $('.notice').html('请输入邮箱')
+          $('.register-error').show()
+          return false
+        } else {
+          if (!emailReg.test(email)) {
+            $('.notice').html('请检查邮箱格式')
+            $('.register-error').show()
+            return false
+          }
+        }
+
+        /*
+        if (!blankReg.test(nickname) && !nicknameReg.test(nickname)) {
+          $('.notice').html('请检查昵称（长度不能超过32个字符）')
+          $('.register-error').show()
+          return false
+        } */
+
+        if (blankReg.test(pwd)) {
+          $('.notice').html('请输入密码')
+          $('.register-error').show()
+          return false
+        } else {
+          if (!pwdReg.test(pwd)) {
+            $('.notice').html('请检查密码格式（长度至少为8位）')
+            $('.register-error').show()
+            return false
+          }
+        }
+        if (blankReg.test(pwd2)) {
+          $('.notice').html('请输入确认密码')
+          $('.register-error').show()
+          return false
+        } else {
+          if (pwd != pwd2) {
+            $('.notice').html('两次密码不一致')
+            $('.register-error').show()
+            return false
+          }
+        }
+        if (blankReg.test(mobile)) {
+          $('.notice').html('请输入手机号码')
+          $('.register-error').show()
+          return false
+        } else {
+          if (!mobileReg.test(mobile)) {
+            $('.notice').html('请检查手机号格式')
+            $('.register-error').show()
+            return false
+          }
+        }
+        /*
+        if (!blankReg.test(qq) && !qqReg.test(qq)) {
+          $('.notice').html('请检查QQ号格式')
+          $('.register-error').show()
+          return false
+        }*/
+
+        if (blankReg.test(code)) {
+          $('.notice').html('请输入验证码')
+          $('.register-error').show()
+          return false
+        }
+
+        $('.register-error').hide()
+        return true
+      }
+      $(function() {
+        function randomCode() {
+          $('#js-code-img').attr('src', '/captcha.html?d=' + new Date().getTime())
+        }
+        $('#js-code-img').on('click', randomCode)
+
+        var $loading = $('.register-loading')
+
+        $('#js-submit').on('click', function(e) {
+          e.preventDefault()
+          if (checkValid()) {
+            $loading.show()
+            $.post(
+              '/v1/users',
+              {
+                email: $('#js-email').val(),
+                // nickname: $('#js-nickname').val(),
+                password: $('#js-password').val(),
+                mobile: $('#js-mobile').val(),
+                // qq: $('#js-qq').val(),
+                captcha: $('#js-code').val()
+              }
+            )
+            .done(function(data) {
+              if (data.errcode != 0) {
+                randomCode()
+                $('.notice').html(data.errmsg)
+                $('.register-error').show()
+              } else {
+                $('.register-error').hide()
+                $('form').hide()
+                $('#register-success').show()
+                var $time = $('#time')
+                var time = 3
+                var timer = setInterval(function() {
+                  if (time > 0) {
+                    time--
+                    $time.text(time)
+                  } else {
+                    clearInterval(timer)
+                    window.location.href = '/login'
+                  }
+                }, 1000)
+              }
+            })
+            .fail(function(err) {
+              $('.notice').html('注册失败')
+              $('.register-error').show()
+            })
+            .always(function() {
+              $loading.hide()
+            })
+          }
+        })
+      })
+
+    </script>
+  </body>
+</html>
+
