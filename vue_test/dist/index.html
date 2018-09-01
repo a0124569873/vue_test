@@ -1,0 +1,42 @@
+Html Webpack Plugin:
+<pre>
+  Error: Parse Error: <div id="app"</div> 
+      <!-- built files will be auto injected --> 
+    <script type="text/javascript" src="/static/js/manifest.eeb2c031c0c552bd70ec  .js"></script><script type="text/javascript" src="/static/js/app.7d1e2adbf2caf  ae4a26d.js"></script></body> 
+  </html>
+  
+  - htmlparser.js:240 new HTMLParser
+    [vue_test]/[_html-minifier@3.5.15@html-minifier]/src/htmlparser.js:240:13
+  
+  - htmlminifier.js:944 minify
+    [vue_test]/[_html-minifier@3.5.15@html-minifier]/src/htmlminifier.js:944:3
+  
+  - htmlminifier.js:1300 exports.minify
+    [vue_test]/[_html-minifier@3.5.15@html-minifier]/src/htmlminifier.js:1300:16  
+  - index.js:296 
+    [vue_test]/[_html-webpack-plugin@2.30.1@html-webpack-plugin]/index.js:296:16  
+  - util.js:16 tryCatcher
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/util.js:16:23
+  
+  - promise.js:512 Promise._settlePromiseFromHandler
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/promise.js:512:31
+  
+  - promise.js:569 Promise._settlePromise
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/promise.js:569:18
+  
+  - promise.js:614 Promise._settlePromise0
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/promise.js:614:10
+  
+  - promise.js:693 Promise._settlePromises
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/promise.js:693:18
+  
+  - async.js:133 Async._drainQueue
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/async.js:133:16
+  
+  - async.js:143 Async._drainQueues
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/async.js:143:10
+  
+  - async.js:17 Immediate.Async.drainQueues [as _onImmediate]
+    [vue_test]/[_bluebird@3.5.1@bluebird]/js/release/async.js:17:14
+  
+</pre>
