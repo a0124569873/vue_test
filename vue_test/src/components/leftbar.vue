@@ -19,7 +19,7 @@
                     <el-menu-item index="/leftbar/promise" >nine_promise</el-menu-item>
                     <el-menu-item index="/leftbar/gstatus" >nine_gstatus</el-menu-item>
                 </el-menu>
-                <a class="toggle"
+                <a class="toggle switch-logo"
                     @click="expand">
                     <i class="el-icon-arrow-left"></i>
                 </a>
@@ -88,7 +88,7 @@ export default {
             //     case "promise":
             //         return "promise"
             //         break;
-            
+            collapsed
             //     default:
             //         break;
             // }
@@ -104,7 +104,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$primary-color: red;
+
+
+.toggle{
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: $primary-color;
+    box-shadow: 0 0 3px #000;
+    transition: transform 0.3s ease-in;
+    &:hover {
+            opacity: 0.8;
+    }
+    transform: rotate(180deg);
+}
 
 #ta {
     color: chartreuse;

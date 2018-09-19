@@ -50,8 +50,10 @@ let mixin = {
   }
 }
 
+
+
 router.beforeEach((to, from, next) => {
-  console.log(to.path)
+  // console.log(to.path)
   if (!(window.localStorage.getItem('login') === 'true')) {
     
     if (to.path !== '/login'){
@@ -75,10 +77,10 @@ new Vue({
   router,
   store,
   components: { App },
-  template: '<App/>',
-  mounted(){
-    this.test_mixin() 
-  }
+  template: '<App/>'
+  // mounted(){
+  //   this.test_mixin() 
+  // }
 })
 // console.error(window.sessionStorage.getItem('login'))
 // if (!(window.sessionStorage.getItem('login') === 'true')) {

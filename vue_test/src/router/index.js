@@ -27,17 +27,17 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'mainn',
+      name: '',
       component: mainn,
       children: [
         {
           path: '/',
-          name: 'leftbar',
+          name: '',
           component: leftbar
         },
         {
           path: 'menuitem',
-          name: 'menuitem',
+          name: '',
           component: menuitem,
           children:[
             {
@@ -57,82 +57,82 @@ export default new Router({
         },
         {
           path: 'header',
-          name: 'header',
+          name: '',
           component: header
         },
         {
           path: 'zxn',
-          name: 'zxn',
+          name: '',
           component: ZXN
         },
         {
           path: 'dialog',
-          name: 'dialog',
+          name: '',
           component: dialog
         },
         {
           path: 'charts',
-          name: 'charts',
+          name: '',
           component: charts
         },
         {
           path: 'leftbar',
-          name: 'leftbar',
+          name: '',
           component: leftbar,
           children: [
             {
               path: '',
-              name: 'dialog',
+              name: '',
               component: dialog
             },
             {
               path: 'charts',
-              name: 'charts',
+              name: '',
               component: charts
             },
             {
               path: 'dialog',
-              name: 'dialog',
+              name: '',
               component: dialog
             },
             {
               path: 'g2chart',
-              name: 'g2chart',
+              name: '',
               component: g2chart
             },
             {
               path: 'bootstrap',
-              name: 'bootstrap',
+              name: '',
               component: bootstrap
             },
             {
               path: 'zxn',
-              name: 'zxn',
+              name: '',
               component: ZXN
             },
             {
               path: 'elui',
-              name: 'elui',
+              name: '',
               component: elui
             },
             {
               path: 'heighchart',
-              name: 'heighchart',
+              name: '',
               component: heighchart
             },
             {
               path: 'father',
-              name: 'father',
+              name: '',
               component: father
             },
             {
               path: 'testcss',
-              name: 'testcss',
+              name: '',
               component: testcss
             },
             {
               path: 'promise',
-              name: 'promise',
+              name: '',
               component: promise
             },
             {
